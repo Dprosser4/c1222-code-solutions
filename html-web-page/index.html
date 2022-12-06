@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>HTML Web Page</title>
+  <style>
+    table,
+    th,
+    td {
+      border: 1px solid black;
+    }
+
+    td:not(:first-child) {
+      text-align: center;
+    }
+  </style>
+</head>
+<body>
+  <h1>Jelly of the Month Club</h1>
+  <h2>Make all your friends jell of your stock of jelly!</h2>
+  <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Explicabo ipsum, eveniet cum sapiente veritatis recusandae exercitationem minima quam nobis corporis, aliquam omnis optio voluptate iusto velit illo aspernatur quaerat autem. Reprehenderit nemo quibusdam sed pariatur vitae cumque, mollitia nisi exercitationem enim eos odio architecto quas laborum dicta natus labore vel.</p>
+
+  <table>
+    <thead>
+      <tr>
+        <th></th>
+        <th>Basic Plan</th>
+        <th>Deluxe Plan</th>
+        <th>Jelly Giant Plan</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td>Three new curated jellies per month</td>
+        <td>&check;</td>
+        <td>&check;</td>
+        <td>&check;</td>
+      </tr>
+      <tr>
+        <td>Monthly jellies come with commemortive mason jars</td>
+        <td></td>
+        <td>&check;</td>
+        <td>&check;</td>
+      </tr>
+      <tr>
+        <td>Free bonus jar of preserves bi-monthly</td>
+        <td></td>
+        <td>&check;</td>
+        <td>&check;</td>
+      </tr>
+      <tr>
+        <td>Free yearly tickets to Jelly Con</td>
+        <td></td>
+        <td></td>
+        <td>&check;</td>
+      </tr>
+      <tr>
+        <td>Monthly Pricing</td>
+        <td>$30</td>
+        <td>$50</td>
+        <td>$60</td>
+      </tr>
+    </tbody>
+  </table>
+
+  <p>Like what you see? Become a part of the JOTMC family today!</p>
+
+  <form>
+
+      <input type="text" id="yourname" placeholder="Your Name">
+
+
+      <select name="plan" id="whichplan">
+        <option value="">Select Your Plan:</option>
+        <option value="basic">Basic</option>
+        <option value="deluxe">Deluxe</option>
+        <option value="jellygiant">Jelly Giant</option>
+      </select>
+
+
+    <input type="submit" name="submit" id="submit">
+
+  </form>
+
+
+</body>
+</html>
