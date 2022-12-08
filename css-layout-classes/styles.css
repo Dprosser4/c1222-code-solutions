@@ -1,0 +1,25 @@
+* {
+  font-family: sans-serif;
+}
+
+.container {
+  max-width: 800px;
+  margin: auto;
+}
+.row {
+  display: flex;
+}
+
+.col-1-3rd {
+  flex-basis: calc(100% /3);
+}
+.col-1-4th {
+  flex-basis: calc(100% / 4);
+}
+.col-2-3rd {
+  flex-basis: calc(100% / 3 * 2);
+}
+
+img{
+  width:100%;
+}
