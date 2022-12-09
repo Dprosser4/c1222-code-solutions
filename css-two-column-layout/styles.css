@@ -1,0 +1,75 @@
+
+
+body {
+  font-family: 'Karla', sans-serif;
+  color: #2b2b2b;
+}
+
+.container {
+  max-width: 1200px;
+  margin:auto;
+}
+
+.row {
+  display: flex;
+}
+
+.wrapit {
+  flex-wrap: wrap;
+}
+
+.col-full {
+  flex-basis: 100%;
+}
+
+.col-50 {
+  flex-basis: 50%;
+  padding-left: 3.7rem;
+  padding-right: 3.7rem;
+}
+.col-75 {
+  flex-basis: 75%;
+}
+.infoitem {
+  padding-top: 1.5rem;
+  padding-bottom: 1.5rem;
+}
+
+.centerit {
+  text-align: center;
+
+}
+
+.btn {
+  color: #D14C45;
+  letter-spacing: 1px;
+  background-color: white;
+  border: #D14C45 solid 2px;
+  padding-left: 3.5rem;
+  padding-right: 3.5rem;
+  padding-top: .9rem;
+  padding-bottom: .85rem;
+  font-size: .95rem;
+
+}
+.header{
+  padding-top: 5rem;
+  padding-left: 11rem;
+  padding-right: 11rem;
+  padding-bottom: 3rem;
+}
+h1{
+  font-size: 3.7rem;
+  letter-spacing: .25rem;
+  margin: auto;
+
+
+}
+p{
+  line-height: 2;
+  font-size: 1.1rem;
+}
+
+h3 {
+  font-weight: 100;
+}
