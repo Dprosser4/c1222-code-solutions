@@ -1,0 +1,46 @@
+body {
+  margin: 0;
+  background-color: #F7F8FA;
+}
+* {
+  box-sizing: border-box;
+}
+.container {
+  max-width: 1000px;
+  margin:auto;
+}
+.row {
+  display: flex;
+}
+.col-full{
+  flex-basis: 100%;
+}
+.col-25 {
+  flex-basis: 25%;
+
+}
+.colflex{
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 0 1rem;
+}
+h1 {
+  text-align: center;
+  font-size: 1.3rem;
+}
+h2 {
+  font-size: .7rem;
+}
+p {
+  font-size: .6rem;
+}
+.fontmain {
+  font-family: 'Barlow', sans-serif;
+}
+.screen{
+  width: 100%;
+}
+.icon {
+  width: 25%;
+}
