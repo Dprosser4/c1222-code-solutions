@@ -91,14 +91,27 @@ padding: .6rem .75rem;
   rgba(60, 60, 60, 0.35)),
   url('images/hero.jpg');
   background-size: cover;
-  position: relative;
-}
+  height: 26rem;
 
+}
+#producthero{
+  background: linear-gradient(rgba(60, 60, 60, 0.35),
+      rgba(60, 60, 60, 0.35)),
+    url('images/product/product-header.jpg');
+  background-size: cover;
+  height: 26rem;
+
+}
 .ontop{
+
   margin: 0;
   padding-bottom: 1rem;
 }
 .padhero {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  justify-content: center;
   padding-left: 3.7rem;
   padding-right: 24.25rem;
   padding-top: 3.7rem;
@@ -115,7 +128,26 @@ padding: .6rem .75rem;
   padding-top: .75rem;
   padding-bottom: .75rem;
 }
+.padleft6 {
+  padding-left: 6rem;
 
+
+}
+.padright6 {
+  padding-right: 6rem;
+}
+
+.padtop3 {
+  padding-top: 3rem;
+}
+
+
+.img100 {
+  width: 100%;
+}
+.italic {
+  font-style: italic;
+}
 
 .linespacing{
   line-height: 2;
