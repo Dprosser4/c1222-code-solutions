@@ -21,17 +21,47 @@ if current word is equal to the any of the exluded words
 
 */
 
+function excludeWord (string){
+  var excludedWords = ['and ', 'or ', 'nor ', 'but ', 'a ', 'an ', 'the ', 'as ', 'at ', 'by ', 'for ', 'in ', 'of ', 'on ', 'per ', 'to ']
+  var exclude = false
+  for (var i = 0; i < excludedWords.length; i++){
+    if (string === excludedWords[i]){
+      return true
+    }
+  }
+  return false
+}
+
+function capFirstLetter(string) {
+  var newStr = string[0].toUpperCase()
+  for (var i = 1; i < string.length; i++){
+    newStr += string[i].toLowerCase()
+
+  }
+  return newStr
+}
+
+
 function titleCase(title){
   var finalString = ''
   var currentWord = ''
-  var excludedWords = ['and', 'or', 'nor', 'but', 'a', 'an', 'the', 'as', 'at', 'by', 'for', 'in', 'of', 'on', 'per', 'to']
   for (var i = 0; i < title.length; i++){
-    currentWord += title[i]
-    if (title[i] === ' '){
-      finalString += currentWord
-      currentWord = ''
+    currentWord += title[i].toLowerCase()
+    console.log(currentWord)
+    if (title[i] === ' ') {
+        if (excludeWord(currentWord) && finalString !== '' || currentWord.endsWith(': ')){
+        finalString += currentWord
+        currentWord = ''
+      } else {
+        currentWord = capFirstLetter(currentWord)
+        finalString += currentWord
+        currentWord = ''
+      }
     }
   }
-  return finalString
-
-}
+    if (currentWord !== ''){
+      currentWord = capFirstLetter(currentWord)
+      finalString += currentWord
+    }
+    return finalString
+  }
