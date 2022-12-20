@@ -3,20 +3,49 @@
 /*
 create a new string for the final capitalized title
 create a string for the current word
-create an array with words to not capitalize
-create a boolean for included in the excluded words
-
 look at each char in string
-add each char to current word
-when the a space char is encountered
-look at each of the excluded words
+add it to current word but lowercase
+check if the char is a space
+  if it is
+  check if it is one of the exluded word(helper function), the first word, or the start of a subtitle
+    if yes add current word to the final string
+    reset current word to empty string
+  check if current word is any of the Special cases (javascipt or API)
+    if yes change current word to the correct string (JavaScript, API)
+  for all other
+  set current word to have its first letter Capitalized (helper function)
+  add the current word the final string
 
-if current word is equal to the any of the exluded words
-  add it to the new string as is
-  if not upper case the first letter (currentWord at index 0)
-  add current word to the new string
+after the loop if currentword is not empty
+ check if its a special case
+ if yes change current word to proper string
+ add it to the final string
+ for all other cases
+ set current word to have proper capitalitaion
+ then add it to the final string
 
-  reset the current word
+return the final string
+
+(helper function for excluding words)
+
+create an array with all excluded words
+create a boolean and set it true
+look at each word in the array and see if it matches the string
+return true if it does
+return false if it doesnt
+
+
+(helper function to capitalize the first char in string)
+
+create a new string with the first char capitalized
+look at each of the rest of the chars
+if the new string ends with a dash (handles subtitles)
+capitalize the nex char
+add it to the new string
+for all other cases add the char to the new string
+
+return the string after the loop
+
 
 
 */
@@ -35,11 +64,16 @@ function excludeWord (string){
 function capFirstLetter(string) {
   var newStr = string[0].toUpperCase()
   for (var i = 1; i < string.length; i++){
-    newStr += string[i].toLowerCase()
-
+    if (newStr.endsWith('-')){
+      newStr += string[i].toUpperCase()
+    } else {
+      newStr += string[i].toLowerCase()
+    }
   }
   return newStr
 }
+
+
 
 
 function titleCase(title){
@@ -47,21 +81,38 @@ function titleCase(title){
   var currentWord = ''
   for (var i = 0; i < title.length; i++){
     currentWord += title[i].toLowerCase()
-    console.log(currentWord)
     if (title[i] === ' ') {
-        if (excludeWord(currentWord) && finalString !== '' || currentWord.endsWith(': ')){
+        if (excludeWord(currentWord) && finalString !== '' && finalString.endsWith(': ') !== true){
+        finalString += currentWord
+        currentWord = ''
+        } else if (currentWord === 'javascript '){
+          currentWord = 'JavaScript '
+          finalString += currentWord
+          currentWord = ''
+        } else if (currentWord === 'javascript: ') {
+          currentWord = 'JavaScript: '
+          finalString += currentWord
+          currentWord = ''
+        } else if (currentWord === 'api ') {
+          currentWord = 'API '
+          finalString += currentWord
+          currentWord = ''
+        } else {
+          currentWord = capFirstLetter(currentWord)
+          finalString += currentWord
+          currentWord = ''
+        }
+    }
+  }
+    if (currentWord !== ''){
+      if (currentWord === 'api') {
+        currentWord = 'API'
         finalString += currentWord
         currentWord = ''
       } else {
         currentWord = capFirstLetter(currentWord)
         finalString += currentWord
-        currentWord = ''
       }
-    }
-  }
-    if (currentWord !== ''){
-      currentWord = capFirstLetter(currentWord)
-      finalString += currentWord
     }
     return finalString
   }
