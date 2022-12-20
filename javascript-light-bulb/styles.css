@@ -1,0 +1,39 @@
+*{
+  box-sizing: border-box;
+
+}
+body {
+  margin: 0;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.container {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 800px;
+  width: 800px;
+}
+
+.lightbulb {
+  border: none;
+  height: 250px;
+  width: 250px;
+  border-radius: 50%;
+}
+.on {
+  box-shadow: 0 0 50px #FAEA84;
+  background-color: #FAEA84;
+}
+.backon {
+  background-color: #FEF9F1;
+}
+.off {
+    box-shadow: 0 -10px 0 10px #0D0D0D;
+    background-color: #222223;
+}
+.backoff {
+  background-color: #111111;
+}
