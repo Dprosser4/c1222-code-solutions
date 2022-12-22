@@ -9,7 +9,7 @@ playTheGame(['Dylan', 'Cody',] , 2)
 */
 function createPlayerObjects(array){
   if (array.length > 4){
-    console.log('input must contain no more than 4 players')
+    console.log('Input must contain no more than 4 players!')
     return
   }
   var players = []
@@ -49,6 +49,10 @@ function createDeckObject(){
 
 
 function playTheGame(array, numberofcards) {
+  if (numberofcards > 13) {
+    console.log('Number of cards must not exceed 12!');
+    return;
+  }
   var cardsDealt = numberofcards
   var gameDeck = createDeckObject()
   var gamePlayers = createPlayerObjects(array)
@@ -59,7 +63,7 @@ function playTheGame(array, numberofcards) {
     }
     gamePlayers[z - 1]['hand'] = tempArr
   }
-
+  console.log(gamePlayers)
   for (var x = 0; x < gamePlayers.length; x++){
     var score = 0
     for (var y = 0; y < gamePlayers[x].hand.length; y++){
@@ -80,6 +84,7 @@ function playTheGame(array, numberofcards) {
       winner.push(gamePlayers[winCompare])
     }
   }
+
   var winners = []
   if (winner.length > 1){
     for (var tie = 0; tie < winner.length; tie++){
