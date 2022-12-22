@@ -83,6 +83,17 @@ function createDeckObject(){
 }
 
 /*
+this is the main function that plays the game
+guard against too many cards being input
+create a variable for cards dealt
+create a varible to store a new shuffled deck and assign it result of the function that creates the desk
+create a variable to store the players objects in the game and assign it the result the function that creates the players
+
+look at each item in the game players
+  create a temp array
+  for the number of cards
+  push the first card in the deck to the temp array
+
 
 */
 
@@ -104,7 +115,6 @@ function playTheGame(array, numberofcards) {
     }
     gamePlayers[z - 1]['hand'] = tempArr
   }
-
 
   console.log(gamePlayers)
   for (var x = 0; x < gamePlayers.length; x++){
