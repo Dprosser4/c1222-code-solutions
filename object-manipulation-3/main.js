@@ -84,6 +84,7 @@ function createDeckObject(){
 
 /*
 this is the main function that plays the game
+
 guard against too many cards being input
 create a variable for cards dealt
 create a varible to store a new shuffled deck and assign it result of the function that creates the desk
@@ -93,8 +94,32 @@ look at each item in the game players
   create a temp array
   for the number of cards
   push the first card in the deck to the temp array
+  add the the temp array to a new property of the player object called hand
 
 
+look at each player
+  create a variable for the score
+  look at each players hand
+    add the points of each card to the score
+  add a new property to each player with their score
+
+create a new variable to store the winning score
+look at each players score
+if the current players score is higher than the variable
+assign the winnning score to the winnning score vairable
+
+create an empty array to store the winner/winners
+look at each players
+if the players score is equal to the winning score
+push that player into the winner array
+
+create an empty array to store the winners as new strings
+if there is more than one winner
+  push the winners names into the new array
+  log that there was a tie in the console
+  have the function call it self with the new array and cards dealt as the new arguments
+or else if there is only one winner
+return the winner and log it to the console
 */
 
 
