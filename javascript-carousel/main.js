@@ -57,6 +57,8 @@ function imageLeft(event) {
     $allDots[currentImgIndex + 1].setAttribute('class', 'dot dot-pad fa-solid fa-circle');
     $allDots[currentImgIndex].setAttribute('class', 'dot dot-pad fa-regular fa-circle');
   }
+  clearInterval(carouselChange);
+  carouselChange = setInterval(imageRight, 3000);
 }
 
 var carouselChange = setInterval(imageRight, 3000);
