@@ -1,5 +1,5 @@
 
-setInterval(changeDisplay, 1000);
+var countdownInterval = setInterval(changeDisplay, 1000);
 
 var $countdownDisplay = document.querySelector('.countdown-display');
 
@@ -10,6 +10,7 @@ function changeDisplay() {
     $countdownDisplay.textContent = displayNum;
   } else {
     $countdownDisplay.textContent = '~Earth Beeeelooowww Us~';
+    clearInterval(countdownInterval);
   }
 
 }
