@@ -8,8 +8,7 @@ function Bank() {
 Bank.prototype.openAccount = function (holder, balance) {
   if (typeof balance === 'number' && balance > 0 && balance % 1 === 0) {
     var newAccount = new Account(this.nextAccountNumber, holder);
-    // eslint-disable-next-line no-undef
-    newAccount.transactions[0] = new Transaction('deposit', balance);
+    newAccount.deposit(balance);
     this.accounts.push(newAccount);
     this.nextAccountNumber++;
     return newAccount.number;
