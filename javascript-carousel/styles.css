@@ -1,0 +1,50 @@
+* {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+}
+
+i:hover {
+  cursor: pointer;
+}
+
+.container {
+  max-width: 800px;
+  margin: auto;
+  border: solid black 3px;
+  border-radius: 10px;
+  background-color: aliceblue;
+}
+
+.row {
+  display: flex;
+}
+
+.column-third {
+  flex-basis: calc(100% /3);
+}
+
+.column-full {
+  flex-basis: 100%;
+}
+
+image {
+  width: 100%;
+}
+
+.align-dots {
+  display: flex;
+  justify-content: center;
+}
+
+.dot-pad {
+  padding: 0.5rem;
+}
+
+.align-arrows {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
